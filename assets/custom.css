@@ -1,0 +1,13 @@
+/* Place custom css here. */
+
+.monospaced-fix {
+  font-size: 85%;
+  line-height: 1;
+  position: relative;
+  vertical-align: baseline;
+  top: -0.5em;
+  bottom: -0.25em;
+  display: inline-block;
+  width: 15px;
+  text-align: center;
+}
