@@ -55,8 +55,8 @@
   </div>
   {{ if .Truncated }}
   <!-- This <div> includes a read more link, but only if the summary is truncated... -->
-  <div>
-    <a class="absolute inset-0" href="{{ .RelPermalink }}" aria-label="Read more about {{ .Title }}" >Read More…</a>
+  <div class="mx-auto">
+    <a class="text-right" href="{{ .RelPermalink }}" aria-label="Read more about {{ .Title }}" >Read More</a>
   </div>
   {{ end }}
 </section>

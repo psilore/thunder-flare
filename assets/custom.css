@@ -45,12 +45,16 @@
 	 src: local(''), url('fonts/Metropolis-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/Metropolis-Bold.woff2') format('woff2'), url('fonts/Metropolis-Bold.woff') format('woff'), url('fonts/Metropolis-Bold.ttf') format('truetype'), url('fonts/Metropolis-Bold.svg#Metropolis') format('svg');
 }
 
-.truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+.truncate p {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .text-base {
-    font-size: 1rem;
+  font-size: 1rem;
+}
+
+.text-right {
+  text-align: right;
 }
