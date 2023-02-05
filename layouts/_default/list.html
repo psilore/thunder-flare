@@ -46,11 +46,11 @@
 {{ end }}
 
 <section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  <h2 class="!my-0 pb-1 !leading-none"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+  <h2 class="!my-0 pb-1 !leading-none not-prose "><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
   <time class="text-sm opacity-60"
     >{{ .Date | time.Format ":date_medium" }}</time
   >
-  <div class="text-base truncate">
+  <div class="not-prose text-base truncate">
     {{ .Summary }}
   </div>
   {{ if .Truncated }}
