@@ -50,13 +50,13 @@
   <time class="text-sm opacity-60"
     >{{ .Date | time.Format ":date_medium" }}</time
   >
-  <div class="not-prose text-base truncate">
+  <div class="not-prose truncate">
     {{ .Summary }}
   </div>
   {{ if .Truncated }}
   <!-- This <div> includes a read more link, but only if the summary is truncated... -->
-  <div class="mx-auto">
-    <a class="text-right" href="{{ .RelPermalink }}" aria-label="Read more about {{ .Title }}" >Read More</a>
+  <div class="not-prose mx-auto text-right">
+    <a href="{{ .RelPermalink }}" aria-label="Read more about {{ .Title }}" >Read More</a>
   </div>
   {{ end }}
 </section>
