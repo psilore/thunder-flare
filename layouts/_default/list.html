@@ -46,21 +46,19 @@
 {{ end }}
 
 <section class="relative my-10 first-of-type:mt-0 last-of-type:mb-0">
-  <h2 class="!my-0 pb-1 !leading-none">{{ .Title }}</h2>
+  <h2 class="!my-0 pb-1 !leading-none"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
   <time class="text-sm opacity-60"
     >{{ .Date | time.Format ":date_medium" }}</time
   >
-  {{ .Summary }}
-  <!-- <details>
-    <p>{{ site.Params.description }}</p>
-  </details> -->
+  <div class="text-base truncate">
+    {{ .Summary }}
+  </div>
   {{ if .Truncated }}
   <!-- This <div> includes a read more link, but only if the summary is truncated... -->
   <div>
-    <a href="{{ .RelPermalink }}">Read More…</a>
+    <a class="absolute inset-0" href="{{ .RelPermalink }}" aria-label="Read more about {{ .Title }}" >Read More…</a>
   </div>
   {{ end }}
-  <!-- <a class="absolute inset-0" aria-label="Read more about {{ .Title }}" href="{{ .Permalink }}"></a> -->
 </section>
 {{ end }}
 
